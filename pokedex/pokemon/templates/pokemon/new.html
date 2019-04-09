@@ -1,0 +1,15 @@
+<h1>Who's that Pokemon?</h1>
+{% if error_message %}
+<p>
+  <strong>{{ error_message }}</strong>
+</p>
+{% endif %}
+<form action="{% url 'pokemon:create' %}" method="POST">
+  {% csrf_token %}
+  <label for="pokemon_name">Name:</label>
+  <input type="text" name="pokemon_name" id="pokemon_name" />
+  <label for="pokemon_type">Type:</label>
+  <input type="text" name="pokemon_type" id="pokemon_type" />
+  <label for="pokemon_number">Number:</label>
+  <input type="text" name="pokemon_number" id="pokemon_number" />
+</form>

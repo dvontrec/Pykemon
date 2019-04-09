@@ -1,0 +1,15 @@
+{% if pokemon_list %}
+<ul>
+  {% for pokemon in pokemon_list %}
+  <li>
+    <!-- makes the href pull from the pokemon "show" url defined in pokemon/urls.py -->
+    <a href="{% url 'pokemon:show' pokemon.pokemon_number %}">
+      {{ pokemon.pokemon_name }}
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No pokemon are available.</p>
+{% endif %}
+<a href="{% url 'pokemon:new' %}">New Pokemon</a>
