@@ -10,6 +10,7 @@ class Pokemon(models.Model):
         verbose_name_plural = "pokemon"
 
     pokemon_name = models.CharField(max_length=255)
+    pokemon_image = models.URLField(blank=True)
     pokemon_type = models.CharField(max_length=255)
     pokemon_number = models.CharField(primary_key=True, max_length=3)
 
