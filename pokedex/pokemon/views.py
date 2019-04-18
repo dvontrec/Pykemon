@@ -34,6 +34,7 @@ def create(request):
     # creates a new instance of the pokemon class with for data
     pokemon = Pokemon(
         pokemon_name=request.POST['pokemon_name'],
+        pokemon_image=request.POST['pokemon_image'],
         pokemon_type=request.POST['pokemon_type'],
         pokemon_number=request.POST['pokemon_number'],
     )
